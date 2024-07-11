@@ -1,0 +1,5 @@
+{
+  "watch": ["src"],
+  "ext": "py",
+  "exec": "clear && python3 src/main.py"
+}
