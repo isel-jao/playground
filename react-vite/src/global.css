@@ -38,6 +38,7 @@
 
   /* spacing */
   --container-padding: clamp(1rem, 5vw, 5rem);
+  --upbar-height: 3rem;
 }
 
 .dark {
@@ -91,4 +92,34 @@ select,
 [role="button"],
 [role="tab"] {
   user-select: none;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-bold;
+}
+
+h4 {
+  @apply text-xl font-bold;
+}
+
+h5 {
+  @apply text-lg font-bold;
+}
+
+h6 {
+  @apply text-base font-bold;
+}
+
+button,
+[role="button"],
+[role="tab"] {
+  @apply select-none;
 }
