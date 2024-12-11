@@ -18,10 +18,12 @@ setup_playground_aliases() {
         # Remove existing playground-related aliases and exports
         grep -v "export PLAYGROUND=" "$HOME/.zshrc" | \
         grep -v "alias js=" | \
-        grep -v "alias py=" | \
-        grep -v "alias react=" | \
         grep -v "alias new-js=" | \
+        grep -v "alias py=" | \
         grep -v "alias new-py=" | \
+        grep -v "alias css=" | \
+        grep -v "alias new-css=" | \
+        grep -v "alias react=" | \
         grep -v "alias new-react=" > "$temp_zshrc"
     fi
 
@@ -32,10 +34,12 @@ setup_playground_aliases() {
         echo
         echo "# Playground Aliases"
         echo "alias js=\"code \$PLAYGROUND/javascript\""
-        echo "alias py=\"code \$PLAYGROUND/python\""
-        echo "alias react=\"code \$PLAYGROUND/react-vite\""
         echo "alias new-js=\"cp -r \$PLAYGROUND/javascript ./javascript-\$(date +%Y%m%d%H%M%S)\""
+        echo "alias py=\"code \$PLAYGROUND/python\""
         echo "alias new-py=\"cp -r \$PLAYGROUND/python ./python-\$(date +%Y%m%d)\""
+        echo "alias css=\"code \$PLAYGROUND/css\""
+        echo "alias new-css=\"cp -r \$PLAYGROUND/css ./css-\$(date +%Y%m%d)\""
+        echo "alias react=\"code \$PLAYGROUND/react-vite\""
         echo "alias new-react=\"cp -r \$PLAYGROUND/react-vite ./react-vite-\$(date +%Y%m%d%H%M%S)\""
     } >> "$temp_zshrc"
 
