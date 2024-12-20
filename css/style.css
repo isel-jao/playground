@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.debug {
+    border: 1px solid red !important;
+}
+.debug > * {
+    border: 1px solid green !important;
+}
+.debug > *> * {
+    border: 1px solid blue !important;
+}
+
+:root, body, main{
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+}

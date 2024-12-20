@@ -36,6 +36,7 @@ export default {
       },
       spacing: {
         container: "var(--container-padding)",
+        upbar: "var(--upbar-height)",
       },
       container: {
         screens: {
@@ -43,6 +44,9 @@ export default {
         },
         padding: "var(--container-padding)",
         center: true,
+      },
+      transitionDuration: {
+        DEFAULT: "var(--transition-duration, 300ms)",
       },
 
       borderRadius: {
