@@ -8,7 +8,8 @@ setup_playground_aliases() {
     # Create playground directories if they don't exist
     mkdir -p "$playground_dir/javascript" \
              "$playground_dir/python" \
-             "$playground_dir/react-vite"
+             "$playground_dir/react-vite" \
+             "$playground_dir/typescript" \
 
     # Temporary file to store modifications
     local temp_zshrc=$(mktemp)
@@ -17,8 +18,12 @@ setup_playground_aliases() {
     if [ -f "$HOME/.zshrc" ]; then
         # Remove existing playground-related aliases and exports
         grep -v "export PLAYGROUND=" "$HOME/.zshrc" | \
+        grep -v "# Playground Configuration (auto-generated)" | \
+        grep -v "# Playground Aliases" | \
         grep -v "alias js=" | \
         grep -v "alias new-js=" | \
+        grep -v "alias ts=" | \
+        grep -v "alias new-ts=" | \
         grep -v "alias py=" | \
         grep -v "alias new-py=" | \
         grep -v "alias css=" | \
@@ -29,12 +34,14 @@ setup_playground_aliases() {
 
     # Add new configuration
     {
+        echo ""
         echo "# Playground Configuration (auto-generated)"
         echo "export PLAYGROUND=\"$playground_dir\""
-        echo
         echo "# Playground Aliases"
         echo "alias js=\"code \$PLAYGROUND/javascript\""
         echo "alias new-js=\"cp -r \$PLAYGROUND/javascript ./javascript-\$(date +%Y%m%d%H%M%S)\""
+        echo "alias ts=\"code \$PLAYGROUND/typescript\""
+        echo "alias new-ts=\"cp -r \$PLAYGROUND/typescript ./typescript-\$(date +%Y%m%d%H%M%S)\""
         echo "alias py=\"code \$PLAYGROUND/python\""
         echo "alias new-py=\"cp -r \$PLAYGROUND/python ./python-\$(date +%Y%m%d)\""
         echo "alias css=\"code \$PLAYGROUND/css\""

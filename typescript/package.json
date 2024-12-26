@@ -5,7 +5,7 @@
   "type": "commonjs",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "pnpm ts-node src/main.ts",
+    "dev": "pnpm nodemon",
     "start": "node dist/main.js",
     "build": "pnpm tsc"
   },
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/node": "^22.10.2",
     "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
