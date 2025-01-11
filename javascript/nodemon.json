@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
   "ext": "js",
-  "exec": "clear && node src/main.js"
+  "exec": "node -e 'console.clear()' && node --env-file=.env.local src/main.js"
 }
