@@ -1,0 +1,5 @@
+{
+  "watch": ["src"],
+  "ext": "cpp,hpp,h",
+  "exec": "clear && g++ -o program src/main.cpp && ./program"
+}

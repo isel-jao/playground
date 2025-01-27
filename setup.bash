@@ -20,6 +20,8 @@ setup_playground_aliases() {
         grep -v "export PLAYGROUND=" "$HOME/.zshrc" | \
         grep -v "# Playground Configuration (auto-generated)" | \
         grep -v "# Playground Aliases" | \
+        grep -v "alias cpp=" | \
+        grep -v "alias new-cpp=" | \
         grep -v "alias js=" | \
         grep -v "alias new-js=" | \
         grep -v "alias ts=" | \
@@ -38,6 +40,8 @@ setup_playground_aliases() {
         echo "# Playground Configuration (auto-generated)"
         echo "export PLAYGROUND=\"$playground_dir\""
         echo "# Playground Aliases"
+        echo "alias cpp=\"code \$PLAYGROUND/cpp\""
+        echo "alias new-cpp=\"cp -r \$PLAYGROUND/cpp ./cpp-\$(date +%Y%m%d%H%M%S)\""
         echo "alias js=\"code \$PLAYGROUND/javascript\""
         echo "alias new-js=\"cp -r \$PLAYGROUND/javascript ./javascript-\$(date +%Y%m%d%H%M%S)\""
         echo "alias ts=\"code \$PLAYGROUND/typescript\""
