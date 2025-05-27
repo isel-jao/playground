@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["src/**/*.spec.ts"],
-  "exec": "node -e 'console.clear()'; pnpm ts-node src/main.ts"
+  "exec": "clear; pnpm ts-node src/main.ts"
 }
