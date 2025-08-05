@@ -5,8 +5,15 @@ export default defineConfig({
   test: {
     coverage: {
       include: ["src/**/*.ts"],
-      exclude: ["src/main.ts"],
+      exclude: [
+        // "src/main.ts",
+        "**/*types.ts",
+        "**/*.d.ts",
+        "src/config/env.ts",
+        "src/config/index.ts",
+      ],
     },
+    include: ["src/**/*.test.ts"],
   },
   resolve: {
     alias: {
