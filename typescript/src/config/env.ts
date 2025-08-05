@@ -6,6 +6,9 @@ const envSchema = z.object({
     .enum(["development", "production", "test"])
     .default("development"),
   BASE_URL: z.url().default("http://localhost:3000"),
+  LOG_LEVEL: z
+    .enum(["fatal", "error", "warn", "info", "debug", "trace"])
+    .default("info"),
 });
 
 const { success, data, error } = envSchema.safeParse(process.env);
