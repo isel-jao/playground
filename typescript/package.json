@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "3.2.4",
+    "dotenv": "^17.2.1",
     "globals": "^15.14.0",
     "nodemon": "^3.1.9",
     "tsc-alias": "^1.8.16",
@@ -26,6 +27,9 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@keyv/redis": "^5.1.1",
+    "cache-manager": "^7.2.0",
+    "cacheable": "^1.10.4",
     "pino": "^9.7.0",
     "pino-pretty": "^13.1.1",
     "zod": "^4.0.10"
