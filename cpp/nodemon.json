@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
   "ext": "cpp,hpp,h",
-  "exec": "clear && g++ -o program src/main.cpp && ./program"
+  "exec": "clear && echo -n \"compiling... \" && g++ -std=c++23  -o program src/main.cpp || (echo  ❌ && exit 1) && echo ✅ && ./program "
 }
