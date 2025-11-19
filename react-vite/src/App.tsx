@@ -1,21 +1,35 @@
-import { useEffect, useRef } from "react";
-import { Card } from "./components/card";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-export default function App() {
-  const appRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    console.log(appRef.current);
-  }, []);
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <main className="container p-[clamp(1rem,5vw,5rem)] grid place-content-center debug">
-      <Card
-        className="w-[min(60rem,80vw)]  aspect-video grid place-content-center"
-        ref={appRef}
-      >
-        <h1 className="text-[clamp(1.2rem,3vw,3rem)] font-bold text-center">
-          React with Vite and TailwindCSS
-        </h1>
-      </Card>
-    </main>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
+
+export default App
