@@ -5,6 +5,7 @@
   --color-foreground: theme('colors.neutral.100');
   --color-card: theme('colors.neutral.800');
   --color-card-foreground: theme('colors.neutral.200');
+  --color-border: theme('colors.neutral.500');
 }
 
 .debug {
@@ -19,16 +20,24 @@
   }
 }
 
-body,
-main {
-  @apply h-full;
-}
-
-body {
-  @apply bg-background text-foreground;
-}
 
 
-.container {
-  @apply max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 border;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  :root,
+  body,
+  main {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 border;
+  }
 }
