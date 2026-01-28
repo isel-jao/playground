@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,12 @@
   </head>
   <body>
     <main id="root"></main>
+    <script>
+      const localTheme = localStorage.getItem("theme");
+      if (localTheme === "light" || localTheme === "dark") {
+        document.documentElement.classList.add(localTheme);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

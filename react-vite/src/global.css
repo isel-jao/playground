@@ -1,12 +1,82 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-background: theme('colors.neutral.900');
-  --color-foreground: theme('colors.neutral.100');
-  --color-card: theme('colors.neutral.800');
-  --color-card-foreground: theme('colors.neutral.200');
-  --color-border: theme('colors.neutral.500');
+
+:root {
+  --background: theme('colors.neutral.50');
+  --foreground: theme('colors.neutral.900');
+  --card: theme('colors.white');
+  --card-foreground: theme('colors.neutral.900');
+  --primary: theme('colors.teal.500');
+  --primary-foreground: theme('colors.white');
+  --destructive: theme('colors.red.600');
+  --destructive-foreground: theme('colors.white');
+  --success: theme('colors.green.500');
+  --success-foreground: theme('colors.white');
+  --warning: theme('colors.yellow.500');
+  --warning-foreground: theme('colors.neutral.900');
+  --info: theme('colors.blue.500');
+  --info-foreground: theme('colors.white');
+  --border: theme('colors.neutral.200');
 }
+
+.dark {
+  --background: theme('colors.neutral.900');
+  --foreground: theme('colors.neutral.50');
+  --card: theme('colors.neutral.800');
+  --card-foreground: theme('colors.neutral.50');
+  --primary: theme('colors.teal.400');
+  --primary-foreground: theme('colors.neutral.900');
+  --destructive: theme('colors.red.400');
+  --destructive-foreground: theme('colors.neutral.900');
+  --success: theme('colors.green.400');
+  --success-foreground: theme('colors.neutral.900');
+  --warning: theme('colors.yellow.400');
+  --warning-foreground: theme('colors.neutral.900');
+  --info: theme('colors.blue.400');
+  --info-foreground: theme('colors.neutral.900');
+  --border: theme('colors.neutral.700');
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    --background: theme('colors.neutral.900');
+    --foreground: theme('colors.neutral.50');
+    --card: theme('colors.neutral.800');
+    --card-foreground: theme('colors.neutral.50');
+    --primary: theme('colors.teal.400');
+    --primary-foreground: theme('colors.neutral.900');
+    --destructive: theme('colors.red.400');
+    --destructive-foreground: theme('colors.neutral.900');
+    --success: theme('colors.green.400');
+    --success-foreground: theme('colors.neutral.900');
+    --warning: theme('colors.yellow.400');
+    --warning-foreground: theme('colors.neutral.900');
+    --info: theme('colors.blue.400');
+    --info-foreground: theme('colors.neutral.900');
+    --border: theme('colors.neutral.700');
+  }
+}
+
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-border: var(--border);
+}
+
 
 .debug {
   border: 1px solid red !important;
