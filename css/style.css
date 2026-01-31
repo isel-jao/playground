@@ -1,24 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .debug {
     border: 1px solid red !important;
-}
-.debug > * {
-    border: 1px solid green !important;
-}
-.debug > *> * {
-    border: 1px solid blue !important;
+
+    &>* {
+        border: 1px solid green !important;
+    }
+
+    &>* {
+        border: 1px solid blue !important;
+    }
 }
 
-:root, body, main{
-    height: 100%;
+@layer base {
+
+    :root,
+    main,
+    body {
+        height: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+}
+
+:root {
+    --color-bg: light-dark(#f4f4f5, #09090b);
+    --color-foreground: light-dark(#18181b, #fafafa);
+
+    --color-card-bg: light-dark(#fafafa, #18181b);
+    --color-card-foreground: light-dark(#09090b, #f4f4f5);
+
+    --color-primary: light-dark(#4f46e5, #6366f1);
+    --color-primary-foreground: light-dark(#ffffff, #000000);
+
+    color-scheme: light dark;
+
 }
 
 body {
-    display: grid;
-    place-content: center;
+    color: var(--color-foreground);
+    background-color: var(--color-bg);
+
+    font-family: monospace;
 }
