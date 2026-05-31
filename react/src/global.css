@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+.debug {
+    border: 1px solid red !important;
+
+    &>* {
+        border: 1px solid green !important;
+    }
+
+    &>* {
+        border: 1px solid blue !important;
+    }
+}
+
+@layer base {
+
+    :root,
+    main,
+    body {
+        height: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    button,
+    a,
+    [role="button"],
+    [role="link"] {
+        cursor: pointer;
+    }
+}
+
+:root {
+
+    --color-bg: light-dark(#f4f4f5, #09090b);
+    --color-foreground: light-dark(#18181b, #fafafa);
+
+    --color-card-bg: light-dark(#fafafa, #18181b);
+    --color-card-foreground: light-dark(#09090b, #f4f4f5);
+
+    /* :has(input[name="theme"][value="dark"]:checked) {
+        color-scheme: dark;
+    }
+
+    :has(input[name="theme"][value="light"]:checked) {
+        color-scheme: light;
+    }
+
+    :has(input[name="theme"][value="device"]:checked) {
+    } */
+    color-scheme: light dark;
+
+}
+
+body {
+    color: var(--color-foreground);
+    background-color: var(--color-bg);
+
+    font-family: monospace;
+}
+
+.container {
+    @apply p-6;
+}
