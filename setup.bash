@@ -8,7 +8,7 @@ setup_playground_aliases() {
     # Create playground directories if they don't exist
     mkdir -p "$playground_dir/javascript" \
              "$playground_dir/python" \
-             "$playground_dir/react-vite" \
+             "$playground_dir/react" \
              "$playground_dir/typescript" \
 
     # Temporary file to store modifications
@@ -44,7 +44,7 @@ setup_playground_aliases() {
         echo "alias new-js=\"cp -r \$PLAYGROUND/javascript \""
         echo "alias new-ts=\"cp -r \$PLAYGROUND/typescript \""
         echo "alias new-py=\"cp -r \$PLAYGROUND/python \""
-        echo "alias new-react=\"cp -r \$PLAYGROUND/react-vite \""
+        echo "alias new-react=\"cp -r \$PLAYGROUND/react \""
     } >> "$temp_zshrc"
 
     # Replace .zshrc with the new configuration
