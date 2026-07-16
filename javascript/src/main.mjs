@@ -1,1 +1,1 @@
-console.log("secret=" + process.env.SECRET);
+console.log("Hello, JavaScript!");
