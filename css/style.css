@@ -24,25 +24,29 @@
         box-sizing: border-box;
     }
 
+    body {
+        color: var(--color-foreground);
+        background-color: var(--color-background);
+
+        font-family: monospace;
+    }
+
 }
 
 :root {
-    --color-bg: light-dark(#f4f4f5, #09090b);
-    --color-foreground: light-dark(#18181b, #fafafa);
-
-    --color-card-bg: light-dark(#fafafa, #18181b);
-    --color-card-foreground: light-dark(#09090b, #f4f4f5);
-
     --color-primary: light-dark(#4f46e5, #6366f1);
     --color-primary-foreground: light-dark(#ffffff, #000000);
 
+    --color-muted: light-dark(#6b7280, #9ca3af);
+    --color-muted-foreground: light-dark(#f4f4f5, #18181b);
+
+    --color-background: light-dark(#f4f4f5, #09090b);
+    --color-foreground: light-dark(#18181b, #fafafa);
+
+
+    --color-card: light-dark(#fafafa, #18181b);
+    --color-card-foreground: light-dark(#09090b, #f4f4f5);
+
     color-scheme: light dark;
 
-}
-
-body {
-    color: var(--color-foreground);
-    background-color: var(--color-bg);
-
-    font-family: monospace;
 }
