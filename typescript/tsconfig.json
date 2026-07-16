@@ -1,22 +1,15 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ES2022",
-    "module": "commonjs",
-    "lib": ["ES2022"],
+    "target": "es2024",
+    "module": "nodenext",
+    "lib": ["ES2024", "DOM"],
+    "types": ["node"],
     "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "declaration": false,
-    "declarationMap": false,
-    "sourceMap": false,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
