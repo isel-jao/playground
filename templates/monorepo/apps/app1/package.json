@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/app1",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --watch src/main.ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@monorepo/lib": "workspace:*"
+  },
+  "devDependencies": {
+    "@monorepo/typescript-config": "workspace:*",
+    "typescript": "catalog:",
+    "@types/node": "catalog:",
+    "tsx": "catalog:"
+  }
+}

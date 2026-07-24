@@ -1,0 +1,11 @@
+{
+  "name": "@monorepo/typescript-config",
+  "exports": {
+    "./base": "./base.json",
+    "./react": "./react.json",
+    "./node": "./node.json"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

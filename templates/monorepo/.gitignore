@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.vite/
+*.local
+tmp
+
+# pnpm
+.pnpm-store/
+
+# federation temp
+*.timestamp-*.mjs
+.federation/
+.mf/
+*.d.ts.map
+
+# VS Code (ignore everything except shared workspace settings)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local db
+plugins/ds-rest/server/db.json
+apps/api/db.json
+
+# turbo
+.turbo

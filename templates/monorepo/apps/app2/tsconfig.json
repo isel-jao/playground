@@ -1,0 +1,9 @@
+{
+  "extends": "@monorepo/typescript-config/node",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}
