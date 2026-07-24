@@ -1,18 +1,27 @@
 {
   "name": "@monorepo/lib",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "dependencies": {},
+  "scripts": {
+    "clean": "rm -rf dist node_modules && git clean -fdx",
+    "fclean": "pnpm clean && rm -rf package-lock.json pnpm-lock.yaml",
+    "build": "pnpm tsc",
+    "test": "vitest run "
+  },
   "devDependencies": {
-    "@monorepo/typescript-config": "workspace:*",
-    "typescript": "catalog:",
-    "@types/node": "catalog:",
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.10"
   }
 }

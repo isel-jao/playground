@@ -1,0 +1,23 @@
+{
+  "name": "@monorepo/types",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist node_modules && git clean -fdx",
+    "fclean": "pnpm clean && rm -rf package-lock.json pnpm-lock.yaml",
+    "build": "pnpm tsc"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

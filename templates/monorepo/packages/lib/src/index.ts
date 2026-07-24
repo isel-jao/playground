@@ -1,1 +1,1 @@
-export { add } from "./add/index.js";
+export { add } from "./lib/add/index.js";

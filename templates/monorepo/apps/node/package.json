@@ -1,0 +1,21 @@
+{
+  "name": "@monorepo/node",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rm -rf dist node_modules && git clean -fdx",
+    "fclean": "pnpm clean && rm -rf package-lock.json pnpm-lock.yaml",
+    "dev": "tsx --watch src/main.ts",
+    "start": "node dist/main.js",
+    "build": "pnpm tsc",
+    "test": "vitest run "
+  },
+  "devDependencies": {
+    "@monorepo/lib": "workspace:*",
+    "@monorepo/types": "workspace:*",
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
